@@ -34,7 +34,7 @@ void btOptimizedBvh::build(btStridingMeshInterface* triangles, bool useQuantized
 
 	struct NodeTriangleCallback : public btInternalTriangleIndexCallback
 	{
-		NodeArray& m_triangleNodes;
+		BulletNodeArray& m_triangleNodes;
 
 		NodeTriangleCallback& operator=(NodeTriangleCallback& other)
 		{
@@ -42,7 +42,7 @@ void btOptimizedBvh::build(btStridingMeshInterface* triangles, bool useQuantized
 			return *this;
 		}
 
-		NodeTriangleCallback(NodeArray& triangleNodes)
+		NodeTriangleCallback(BulletNodeArray& triangleNodes)
 			: m_triangleNodes(triangleNodes)
 		{
 		}

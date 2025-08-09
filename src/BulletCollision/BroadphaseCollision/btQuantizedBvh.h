@@ -158,7 +158,7 @@ public:
 #include "LinearMath/btAlignedObjectArray.h"
 
 ///for code readability:
-typedef btAlignedObjectArray<btOptimizedBvhNode> NodeArray;
+typedef btAlignedObjectArray<btOptimizedBvhNode> BulletNodeArray;
 typedef btAlignedObjectArray<btQuantizedBvhNode> QuantizedNodeArray;
 typedef btAlignedObjectArray<btBvhSubtreeInfo> BvhSubtreeInfoArray;
 
@@ -187,8 +187,8 @@ protected:
 	//quantization data
 	bool m_useQuantization;
 
-	NodeArray m_leafNodes;
-	NodeArray m_contiguousNodes;
+	BulletNodeArray m_leafNodes;
+	BulletNodeArray m_contiguousNodes;
 	QuantizedNodeArray m_quantizedLeafNodes;
 	QuantizedNodeArray m_quantizedContiguousNodes;
 
